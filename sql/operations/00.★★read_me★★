@@ -1,1 +1,62 @@
 
+# 🛠 SQL Operations Reference
+
+이 폴더는 데이터 분석 및 리포트 수행 전,
+**테이블 상태·구조·데이터 품질을 점검하기 위한 운영용 SQL**을 정리한 공간입니다.
+
+분석 로직 자체보다는,
+분석이 가능하도록 만드는 **사전 점검(Operation) 목적의 쿼리**를 관리합니다.
+
+---
+
+## 🎯 Scope
+이 폴더에서는 다음과 같은 SQL을 다룹니다.
+
+- 테이블 스키마(컬럼/타입) 확인
+- 데이터 건수 및 용량 점검
+- 파티션/클러스터링 구조 확인
+- NULL/중복/이상치 점검
+- 운영 리포트/배치 전 사전 체크
+
+---
+
+## 📁 Folder Structure
+
+```text
+operations/
+ ├─ schema/    # 테이블 구조·메타데이터 확인
+ ├─ volume/    # row count, size, partition volume
+ ├─ quality/   # null, duplicate, integrity check
+
+---
+
+# 4️⃣ schema 하위 README (선택이지만 추천)
+
+## 📄 `sql/operations/schema/README.md`
+
+```md
+# 📐 Schema Inspection Queries
+
+이 폴더는 BigQuery의 `INFORMATION_SCHEMA`를 활용하여
+**테이블 구조(컬럼, 타입, NULL 허용 여부 등)**를 확인하는 쿼리를 관리합니다.
+
+---
+
+## 🎯 Purpose
+- 테이블 컬럼 구조 빠른 파악
+- 데이터 타입/NULL 허용 여부 확인
+- 신규 테이블 분석 전 사전 점검
+
+---
+
+## 📄 Included Queries
+
+### `describe_table_columns_bigquery.sql`
+- 특정 테이블의 컬럼명, 데이터 타입, NULL 허용 여부 조회
+- BigQuery `INFORMATION_SCHEMA.COLUMNS` 활용
+
+---
+
+## 📌 Notes
+- INFORMATION_SCHEMA 경로는 수정하지 말 것
+- 메타데이터 조회용 쿼리이므로 성능 부담 없음
