@@ -1,0 +1,39 @@
+
+# 🔗 SQL JOIN Patterns (Basic)
+
+이 폴더는 SQL JOIN을 사용할 때 발생하는
+'중복, 누락, 기준 왜곡 문제를 방지하기 위한 실무 패턴'을 정리한 레퍼런스입니다.
+
+단순 문법 예제가 아니라,
+'언제 어떤 JOIN을 써야 하는지'를 목적 기준으로 정리합니다.
+
+---
+
+## 🎯 Scope
+- INNER / LEFT JOIN 기본 사용
+- 기준 테이블 유지 패턴
+- 누락 데이터 탐색 (ANTI JOIN)
+- 필터링 목적 JOIN (SEMI JOIN)
+- 집계 전/후 JOIN 주의사항
+- 날짜 구간 조건 JOIN
+
+---
+
+## 📁 Included Queries
+
+| File | Purpose |
+|----|----|
+| inner_join_basic.sql | 기본 INNER JOIN 패턴 |
+| left_join_keep_base.sql | 기준 테이블 유지 LEFT JOIN |
+| anti_join_missing_records.sql | 매칭되지 않은 데이터 탐색 |
+| semi_join_filtering.sql | 존재 여부 기준 필터링 |
+| join_with_aggregation.sql | 집계 후 JOIN 패턴 |
+| join_dedup_before_join.sql | JOIN 전 중복 제거 |
+| join_date_range_condition.sql | 날짜 구간 기반 JOIN |
+
+---
+
+## 🧠 Practical Notes
+- JOIN은 **결합**이 아니라 **관계 정의**임
+- JOIN 전에 중복 제거 여부를 항상 검토
+- LEFT JOIN 후 WHERE 조건으로 INNER JOIN이 되는 실수 주의
