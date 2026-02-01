@@ -1,0 +1,49 @@
+# 🪟 SQL Window Functions Reference
+
+이 폴더는 SQL에서 자주 사용되는 **윈도우 함수(Window Function) 패턴**을
+실무 기준으로 정리한 레퍼런스입니다.
+
+윈도우 함수는 "집계는 하되 행을 유지"해야 하는 상황에서 필수이며,
+고객/캠페인/리포트 분석에서 반복적으로 사용됩니다.
+
+---
+
+## 🎯 Scope
+- 순위/정렬: ROW_NUMBER, RANK, DENSE_RANK
+- 이전/다음 값: LAG, LEAD
+- 누적 합/평균: SUM/AVG OVER
+- 이동 평균: ROWS BETWEEN
+- 파티션 내 비율/점유율: SUM OVER 기반 비율 계산
+
+---
+
+## 📁 File Naming Convention
+파일명은 기능 중심으로 통일합니다.
+
+
+### Examples
+- `row_number_latest_record.sql`
+- `rank_top_n_per_group.sql`
+- `lag_lead_diff.sql`
+- `running_total.sql`
+- `moving_average.sql`
+- `share_of_total.sql`
+
+---
+
+## 🧠 SQL File Structure
+각 SQL 파일은 다음 구조를 따릅니다.
+
+```sql
+/*
+Title: <Short title>
+Category: SQL Basic / Window
+Purpose:
+  - 이 패턴이 해결하는 문제 요약
+Use Case:
+  - 어떤 실무 상황에서 쓰는지
+Dialect:
+  - BigQuery
+Notes:
+  - 주의사항 (정렬 기준, 동점 처리 등)
+*/
