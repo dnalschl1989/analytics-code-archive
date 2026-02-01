@@ -1,0 +1,64 @@
+# 📅 SQL Date Handling Reference
+
+이 폴더는 SQL에서 자주 사용되는 **날짜 변환, 날짜 계산, 기간 처리 로직**을  
+실무 기준으로 정리한 **Date 관련 기본 패턴 모음**입니다.
+
+분석·CRM·운영 업무에서 반복적으로 등장하는  
+날짜 처리 요구사항을 빠르게 해결하기 위한 레퍼런스로 활용합니다.
+
+---
+
+## 🎯 Scope
+이 폴더에서는 아래 유형의 SQL 로직을 다룹니다.
+
+- 문자열 → DATE / TIMESTAMP 변환
+- 날짜 간 차이 계산 (일 / 월 / 년)
+- 기준일 기준 날짜 가감
+- 월/주/일 단위 날짜 절삭(truncate)
+- 기간(Date range) 생성
+
+---
+
+## 📁 File Naming Convention
+
+파일명은 **기능 중심**으로 통일합니다.
+
+### Examples
+- `convert_string_to_date.sql`
+- `calculate_date_diff.sql`
+- `add_months_to_date.sql`
+- `truncate_date.sql`
+- `generate_date_range.sql`
+
+> 파일명만 보고도  
+> “언제 써야 하는 쿼리인지” 바로 알 수 있도록 작성합니다.
+
+---
+
+## 🧠 SQL File Structure
+
+모든 SQL 파일은 **아래 공통 구조**를 따릅니다.
+
+```sql
+/*
+Title: <Short title>
+Category: SQL Basic / Date
+Purpose:
+  - 이 쿼리가 해결하려는 문제 요약
+
+Use Case:
+  - 실제 업무에서 사용되는 상황
+
+Input:
+  - 주요 입력 컬럼 또는 파라미터
+
+Output:
+  - 결과 컬럼 또는 계산 결과
+
+Dialect:
+  - BigQuery / Impala / ANSI SQL
+
+Notes:
+  - 주의사항 또는 DB별 차이
+*/
+
