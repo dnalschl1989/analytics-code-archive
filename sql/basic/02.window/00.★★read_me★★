@@ -1,6 +1,6 @@
 # 🪟 SQL Window Functions Reference
 
-이 폴더는 SQL에서 자주 사용되는 **윈도우 함수(Window Function) 패턴**을
+이 폴더는 SQL에서 자주 사용되는 "윈도우 함수(Window Function) 패턴"을
 실무 기준으로 정리한 레퍼런스입니다.
 
 윈도우 함수는 "집계는 하되 행을 유지"해야 하는 상황에서 필수이며,
