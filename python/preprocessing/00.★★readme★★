@@ -1,0 +1,15 @@
+# Preprocessing (전처리)
+
+## Why
+이 문서는 자주 쓰는 전처리 패턴을 문제 → 코드 → 주의사항으로 정리하였습니다.
+
+---
+
+## Index
+- Filtering / Selection
+- String / Text cleaning
+- Column slicing
+- Deduplicate / Replace / Missing
+- Groupby / Aggregate
+- Datetime / Time series
+- Train-Test feature alignment
